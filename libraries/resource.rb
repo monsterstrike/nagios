@@ -31,7 +31,6 @@ class Nagios
     def initialize(key, value = nil)
       @key = key
       @value = value
-      super()
     end
 
     def definition

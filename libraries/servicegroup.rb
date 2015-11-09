@@ -38,7 +38,6 @@ class Nagios
       @servicegroup_name = servicegroup_name
       @members = {}
       @servicegroup_members = {}
-      super()
     end
 
     def definition
