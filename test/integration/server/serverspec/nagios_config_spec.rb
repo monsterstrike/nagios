@@ -85,6 +85,8 @@ describe 'Nagios Configuration' do
   file_hosts_exclude = []
   file_hosts_exclude << 'chefnode_exclude_arr'
   file_hosts_exclude << 'chefnode_exclude_str'
+  file_hosts_exclude << '!chefnode_c'
+  file_hosts_exclude << '!chefnode_d'
 
   file_hosts_exclude.each do |line|
     describe file("#{path_config_dir}/hosts.cfg") do
