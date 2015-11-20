@@ -116,7 +116,6 @@ bash 'compile-nagios' do
     make all
     make install
     make install-init
-    make install-config
     make install-commandmode
     #{node['nagios']['source']['add_build_commands'].join("\n")}
   EOH
