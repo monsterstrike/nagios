@@ -123,12 +123,6 @@ bash 'compile-nagios' do
   subscribes :run, 'execute[extract-nagios]', :immediately
 end
 
-directory node['nagios']['config_dir'] do
-  owner 'root'
-  group 'root'
-  mode '0755'
-end
-
 %w( cache_dir log_dir run_dir ).each do |dir|
   directory node['nagios'][dir] do
     owner node['nagios']['user']
